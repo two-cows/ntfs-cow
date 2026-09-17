@@ -1,0 +1,6 @@
+{
+  // CommonMark and GitHub Flavored Markdown support is built in:
+  // https://github.com/DavidAnson/markdownlint#overview
+  "default": true,
+  "MD013": false
+}
