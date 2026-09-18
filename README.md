@@ -10,16 +10,7 @@ Current stage: educational. The repository has development tooling and documenta
 
 ### 1. Educational
 
-**First milestone: create a CoW clone of a single file, using whole-file copy-on-first-write.**
-
-- Initially, logical copies share the same backing file contents.
-- On the first write to a copy, duplicate the entire file into private storage and apply the write there. Subsequent reads and writes use that private file.
-- Verify that modifying one copy leaves the base and other copies unchanged, and that discarding a copy reclaims only its private storage.
-- Use whole-file mappings, with no block-level accounting.
-
-This milestone may require an immutable base. Before sharing it, choose, document, and enforce how the base becomes immutable. A live source directory must not be treated as a snapshot.
-
-The interface and implementation approach remain open. Keep the first implementation small enough to trace its behavior and test its isolation guarantees.
+**First milestone: clone a single file so that its contents are readable through both the original and clone paths.**
 
 ### 2. Experimental
 
